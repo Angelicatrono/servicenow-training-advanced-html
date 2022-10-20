@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+
+body{
+    font-family:'Readex Pro', sans-serif;
+
+}
+
+andress {
+    display: inline-block;
+    font-style: normal;
+}
+
+time {
+    color: grey;
+}
+
+footer{
+    color: lightgray;
+}
+
+main{
+    max-width: 900px;
+    background-color: aquamarine;
+    margin:auto;
+}
+
