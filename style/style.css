@@ -2,8 +2,10 @@
 
 
 
+
 body{
     font-family:'Readex Pro', sans-serif;
+    background-color: #d3d3d3;
 
 }
 
@@ -22,7 +24,98 @@ footer{
 
 main{
     max-width: 900px;
-    background-color: aquamarine;
+    background-color: rgb(141, 161, 248);
     margin:auto;
 }
+
+article {
+    margin: 35px;
+}
+
+a{
+    text-decoration: none;
+}
+nav ul a{
+
+    list-style: none;
+}
+
+/*stile per un menu responsive*/
+nav{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color:#000000;
+    overflow: hidden;
+
+}
+nav ul a{
+    display: block;
+    padding: 30px;
+    color: #ffffff;
+}
+nav ul a:hover{
+    background-color:beige;
+}
+nav{
+    max-height: 0;
+    transition: max-height .5s ease-out;
+}
+
+
+
+/* Menu Icon */
+.hamb{
+    cursor: pointer;
+    float: right;
+    padding: 40px 20px;
+}/* Style label tag */
+
+.hamb-line {
+    background: #ffffff;
+    display: block;
+    height: 2px;
+    position: relative;
+    width: 24px;
+
+} /* Style span tag */
+
+.hamb-line::before,
+.hamb-line::after{
+    background: #ffffff;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+.hamb-line::before{
+    top: 5px;
+}
+.hamb-line::after{
+    top: -6px;
+}
+
+.side-menu {
+    display: none;
+} /* Hide checkbox */
+
+/* Toggle menu icon */
+.side-menu:checked ~ nav{
+    max-height: 100%;
+}
+.side-menu:checked ~ .hamb .hamb-line {
+    background: transparent;
+}
+.side-menu:checked ~ .hamb .hamb-line::before {
+    transform: rotate(-45deg);
+    top:0;
+}
+.side-menu:checked ~ .hamb .hamb-line::after {
+    transform: rotate(45deg);
+    top:0;
+}
+
+
 
