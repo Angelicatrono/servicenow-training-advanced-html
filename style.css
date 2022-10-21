@@ -1,16 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+/*
+Cambio il font a livello globale
+*/
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro&display=swap');
 
-
-
-
-body{
-    font-family:'Readex Pro', sans-serif;
-    background-color: #ffffff;
+body {
+    font-family: 'Readex Pro', sans-serif;
     margin: 0;
-    padding:0;
+    padding: 0;
 }
 
-andress {
+address {
     display: inline-block;
     font-style: normal;
 }
@@ -24,82 +23,94 @@ header {
     width: 100%;
     height: 70px;
     background-color: rgb(255, 255, 255);
-    box-shadow: 0px 5px 10px 1px rgba(153, 153, 153, 0.7);
-    top:0;
-    z-index:999;
+    top: 0;
+    z-index: 999;
+    -webkit-box-shadow: 0px 5px 10px 1px rgba(0,0,0,0.3); 
+    box-shadow: 0px 5px 10px 1px rgba(0,0,0,0.1);
 }
-footer{
+
+footer {
     color: lightgray;
 }
 
-main{
-    position:relative;
-    max-width: 801px;
-    background-color: rgb(255, 255, 255);
-    margin:auto;
-    margin-top:70px;
-    padding-top:10px;
+main {
+    position: relative;
+    max-width: 800px;
+    margin: auto;
+    margin-top: 70px;
+    padding-top: 10px;
 }
 
 article {
     margin: 35px;
 }
 
+
 a{
     text-decoration: none;
 }
-nav ul a{
 
+nav ul {
     list-style: none;
-   
+    margin: 0;
+    padding-left: 0;
 }
 
-/*stile per un menu responsive*/
-nav{
+
+
+
+
+
+/* Stile per la creazione di un menu responsive */
+nav {
     width: 100%;
-    height: 100%;
+    height: fit-content;
     position: absolute;
-    background-color:#ffffff;
     overflow: hidden;
-    right:0;
+    right: 0;
 
 }
-nav ul a{
+nav ul a {
     display: block;
     padding: 0px 25px;
-    height:70px;
+    height: 70px;
+    line-height: 75px;
     color: #000000;
-    background-color: #ffffff;
-    margin:0;
+    background-color: #fff;
+    transition: all 0.3s ease;
 }
-nav ul a:hover{
-    background-color:#000000;
-
+nav ul a:hover {
+    background-color: rgb(0, 0, 0);
+    color: #fff;
 }
-nav{
+nav {
     max-height: 0;
     transition: max-height .5s ease-out;
 }
 
-header h2{
-
-display:inline-block;
-top:0;
+header h2 {
+    display: inline-block;
+    margin-left: 15px;
+    margin-right: 10px;
 }
 
-/* Menu Icon */
+
+
+
+
+
+/* Hamburger Menu Icon */
 .hamb{
     cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 0;
     padding: 40px 20px;
-    position:absolute;
-    right:0;
-    top:0;
-    padding:40px 20px;
-    z-index:999;
+    z-index: 999;
 }/* Style label tag */
 
 .hamb-line {
-    background: #000000;
+    background-color: #000000;
     display: block;
     height: 2px;
     position: relative;
@@ -108,11 +119,11 @@ top:0;
 } /* Style span tag */
 
 .hamb-line::before,
-.hamb-line::after{
-    background: #000000;
+.hamb-line::after {
+    background-color: #000000;
     content: '';
     display: block;
-    height: 100%;
+    height: 2px;
     position: absolute;
     transition: all .2s ease-out;
     width: 100%;
@@ -128,10 +139,10 @@ top:0;
     display: none;
 } /* Hide checkbox */
 
+
+
 /* Toggle menu icon */
-.side-menu:checked ~ nav{
-    max-height: fit-content;
-}
+
 .side-menu:checked ~ .hamb .hamb-line {
     background: transparent;
 }
@@ -144,9 +155,13 @@ top:0;
     top:0;
 }
 
+/*
+media con min-width: 768px significa:
+Se la dimensione della finestra del browser è ALMENO
+768px, allora applichi le regole dentro il blocco seguente
+*/
+@media (min-width: 768px) { 
 
-/* Responsiveness */
-@media (min-width: 700px) {
     nav{
         max-height: none;
         top: 0;
@@ -156,8 +171,9 @@ top:0;
         float: left;
     }
     nav ul a:hover{
-        background-color: #000;
-        color: #666666;
+        background-color: black;
+        color: #fff;
+
 
     }
 
@@ -165,5 +181,5 @@ top:0;
         display: none;
     }
 }
-
+    
 

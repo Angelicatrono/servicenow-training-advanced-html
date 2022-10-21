@@ -7,6 +7,9 @@
     <title>Curriculum Personale</title>
     <link rel="stylesheet" href="style.css">
 </head>
+<!--Collego un file javascript al mio progetto-->
+<script src="script/navbar.js"></script>
+
 
 <body>
     <header>
@@ -14,16 +17,22 @@
         IT
 
         <input class="side-menu" type="checkbox" id="side-menu"/>
-        <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+        <label class="hamb" for="side-menu" onclick="toggleMenu()">
+            <span class="hamb-line"></span>
+        </label>
 
-        <nav>
+        <nav id="navbar">
             <ul>
-                <li>
+                <li class="voce-menu">
                     <a href="index.html"> Home / CV </a>
                 </li>
-                <li>
+                <li class="voce-menu">
                     <a href="aboutme.html"> About me </a>
                 </li>
+               <li class="voce-menu">
+                <a > Galleria </a>
+
+               </li> 
     
             </ul>
     
@@ -45,7 +54,7 @@
         -Descrizione
   -->
 
-
+    <h2 id="testo-in-alto"> Ciao... </h2>
 
 
 
